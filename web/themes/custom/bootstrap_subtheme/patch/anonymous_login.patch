@@ -1,0 +1,26 @@
+diff --git a/src/EventSubscriber/AnonymousLoginSubscriber.php b/src/EventSubscriber/AnonymousLoginSubscriber.php
+index 142e09b..c4a44da 100644
+--- a/src/EventSubscriber/AnonymousLoginSubscriber.php
++++ b/src/EventSubscriber/AnonymousLoginSubscriber.php
+@@ -212,7 +212,7 @@ class AnonymousLoginSubscriber implements EventSubscriberInterface {
+     $redirect = FALSE;
+ 
+     // Iterate the current path and alias.
+-    foreach ($current as &$check) {
++    foreach ($current as $check) {
+       // Remove the leading or trailer slash.
+       $check = $this->pathSlashCut($check);
+ 
+diff --git a/tests/src/Unit/AnonymousLoginSubscriberTest.php b/tests/src/Unit/AnonymousLoginSubscriberTest.php
+index f9d18b7..986cf47 100644
+--- a/tests/src/Unit/AnonymousLoginSubscriberTest.php
++++ b/tests/src/Unit/AnonymousLoginSubscriberTest.php
+@@ -30,7 +30,7 @@ class AnonymousLoginSubscriberTest extends UnitTestCase {
+     }
+     else {
+       $alias = empty($alias) ? $request_uri : $alias;
+-      $redirect_uri = $redirect_uri . '?destination=' . substr($alias, 1);
++      $redirect_uri = $redirect_uri . '?destination=' . $alias;
+     }
+     $this->assertTrue($event->getResponse() instanceof RedirectResponse);
+     $response = $event->getResponse();

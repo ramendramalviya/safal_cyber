@@ -1,0 +1,959 @@
+/* 
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass
+*/
+
+// import files
+@import "import";
+
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+body {
+	background: $white;
+}
+
+
+/* COLORS 
+--------------------------------------------------*/
+
+a {
+	color: $accent-shade;
+}
+
+.bg-inverse {
+	background: $primary-shade !important;
+}
+
+.menu--main li a {
+	color: $primary-shade;
+}
+
+.menu--account li a {
+	color: $primary-shade;
+}
+
+.site-name-slogan a {
+	text-decoration: none;
+}
+
+.card-group img {
+	margin: 0;
+	width: 100%;
+	height: auto;
+}
+
+.card-group .field--type-image {
+	margin: 0
+}
+
+.slick {
+	width: 100%;
+}
+
+.slick>div {
+	margin: 0 15px;
+}
+
+// For header CSS 
+
+#page-wrapper {
+	#header {
+		width: 100%;
+		padding: 2.5rem;
+		padding-top: 4.25rem;
+		background-color: $white;
+		z-index: 999;
+		position: relative;
+		// margin-bottom: 18.75rem;
+		transition: transform 0.3s ease-in-out;
+
+		@media screen and (max-width:767px) {
+			padding-top: 1.5rem;
+		}
+		@media screen and (max-width:1024px) {
+			padding: 1.5rem;
+		}
+
+		nav#navbar-main {
+			max-width: 1800px;
+			margin: 0 auto;
+			@media screen and (max-width:1024px) {
+				// align-items: start;
+			}
+			@media screen and (max-width:767px) {
+				flex-direction: column;
+			}
+
+			.header-site-title {
+				p {
+					font-size: 1.688rem;
+					font-weight: 400;
+					font-style: italic;
+					margin: 0;
+
+					@media screen and (max-width:991px) {
+						font-size: 1.25rem;
+					}
+				}
+
+				@media screen and (max-width:991px) {
+					width: 100%;
+					text-align: center;
+				}
+			}
+
+			a {
+				&.navbar-brand{
+					width: 56%;
+					@media screen and (max-width:1335px) {
+						width: 45%;
+					}
+					@media screen and (max-width:1024px) {
+						width: 70%;
+					}
+					@media screen and (max-width:767px) {
+						width: 100%;
+					}
+				}
+				
+				img {
+					height: 5rem;
+
+					@media screen and (max-width:480px) {
+						height: auto;
+					}
+				}
+
+				@media screen and (max-width:991px) {
+					margin: 0 auto;
+				}
+			}
+			.block-superfishmain{
+				width: 44%;
+				@media screen and (max-width:1335px) {
+					width: 55%;
+				}
+
+				@media screen and (max-width:1024px) {
+					width: 30%;
+					.sf-accordion-toggle{
+						float: right;
+					}
+				}
+				@media screen and (max-width:767px) {
+					width: 100%;
+					.content{
+						// width: 250px;
+						// float: right;
+					}
+				}
+				
+				ul{
+					float: right;
+					li{
+						a{
+							padding: 0 9px;
+							font-size: 1.102rem;
+							line-height: 1.984rem;
+							font-weight: 300;
+							color: #000;
+							.sf-sub-indicator{
+								display: none;
+							}
+							@media screen and (max-width:1335px) {
+								padding: 0 4px;
+							}
+							@media screen and (max-width:1024px) {
+								// float: right;
+								font-size: 32px;
+								line-height: 32px;
+								text-align: center;
+								padding: 10px 0;
+							}
+						}
+						&:last-child{
+							a{
+								padding-right: 0;
+							}							
+						}
+						&.menuparent{
+								ul{
+									box-shadow: none;
+									width: 235px !important;
+									padding: 8.80px 17.36px !important;
+									left: -132px;
+									top: 1.875rem;
+									background: #fff !important;
+									a{
+										float: right;
+										display: inline-block;
+										padding: 1.764px 0;
+										line-height: 22px;
+										&::after {
+											content: '';
+											position: absolute;
+											width: 100%;
+											height: 1px;
+											left: 0;
+											bottom: 0.1em;
+											background-color: currentColor;
+											transform: scalex(0);
+											transform-origin: right;
+											transition: transform .6s cubic-bezier(.19,1,.22,1);
+										}
+											&:hover::after {
+												transform: scalex(1);
+												transform-origin: left;
+										
+										}
+										@media screen and (max-width:1024px) {
+											float: right;
+											background-color: transparent !important;
+										}
+										
+									}
+									@media screen and (max-width:1024px) {
+										background-color: transparent !important;
+										width: 100% !important;
+									}
+								}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-node-14 {
+	#page-wrapper {
+		#header {
+			margin-bottom: 18.75rem;
+		}
+	}
+}
+
+.admin-user-role {
+	.header-banner {
+		.field--name-field-title {
+			bottom: 34.375rem;
+
+			@media screen and (max-width: 1024px) {
+				bottom: 37.375rem;
+			}
+
+			@media screen and (max-width: 767px) {
+				bottom: 17.375rem;
+			}
+
+			@media screen and (max-width:400px) {
+				bottom: 20.875rem;
+			}
+		}
+	}
+}
+
+//for header CSS End
+
+// For Banner CSS
+
+// .header-banner {
+// 	position: absolute;
+// 	top: -8.438rem;
+// 	width: 100%;
+
+// 	.field--name-field-banner-image {
+// 		position: relative;
+// 		width: 100%;
+
+// 		img {
+// 			width: 100%;
+
+// 			@media screen and (max-width:767px) {
+// 				height: 630px;
+// 			}
+// 		}
+
+// 		&::after {
+// 			content: "";
+// 			display: block;
+// 			position: absolute;
+// 			top: 0;
+// 			bottom: 0;
+// 			left: 0;
+// 			right: 0;
+// 			width: 100%;
+// 			height: calc(100% - 16px);
+// 			background: rgba(0, 0, 0, 0.6);
+// 		}
+// 	}
+
+// 	.field--name-field-title {
+// 		font-size: 4.278rem;
+// 		font-weight: 500;
+// 		color: $white;
+// 		text-align: center;
+// 		position: relative;
+// 		// bottom: 34.375rem;
+// 		bottom: 39.375rem;
+// 		margin-bottom: -29.688rem;
+// 		padding: 0 20px;
+
+// 		@media screen and (max-width:767px) {
+// 			bottom: 19.125rem;
+// 		}
+
+// 		@media screen and (max-width:767px) {
+// 			font-size: 3.50rem;
+// 		}
+
+// 		@media screen and (max-width:450px) {
+// 			bottom: 21.875rem;
+// 		}
+// 	}
+
+// }
+
+.page-view-group-nodes {
+	nav {
+		&.action-links {
+			display: flex;
+			gap: 15px;
+			margin-bottom: 15px;
+			flex-wrap: wrap;
+		}
+	}
+
+}
+
+// For Banner CSS End
+
+// For Resource section CSS
+
+#main-wrapper {
+	background-color: $white;
+	position: relative;
+	z-index: 99;
+	padding-top: 2.438rem;
+}
+
+.resources-view-wrap {
+	.res-view-head {
+		text-align: center;
+
+		h2 {
+			font-size: 1.614rem;
+			font-weight: 700;
+			line-height: 2.206rem;
+			color: #000;
+		}
+
+		.res-view-desc {
+			font-size: 1.375rem;
+			font-weight: 500;
+			line-height: 2.206rem;
+			color: #000;
+			padding-bottom: 2rem;
+		}
+	}
+
+	.view-content {
+		row-gap: 40px;
+
+		.views-row {
+			position: relative;
+			padding-bottom: 70px;
+
+
+			.resources-img {
+				margin-bottom: 2rem;
+
+				div {
+					height: 256px;
+					max-width: 256px;
+					margin: 0 auto;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+
+				}
+			}
+
+			.resources-title {
+				text-align: center;
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: 10px;
+				justify-content: center;
+
+				a {
+					font-size: 1.614rem;
+					font-weight: 700;
+					line-height: 2.206rem;
+					color: $color-heading;
+				}
+			}
+
+			.resources-desc {
+				text-align: center;
+
+				p {
+					font-size: 1.375rem;
+					font-weight: 500;
+					line-height: 2.206rem;
+					color: #000;
+					margin-bottom: 25px;
+
+					@media screen and (max-width: 767px) {
+						font-size: 1.25rem;
+						line-height: 1.875rem;
+
+					}
+				}
+			}
+
+			.resources-link {
+				position: absolute;
+				bottom: 0;
+				width: calc(100% - 48px);
+
+				a {
+					display: inline-block;
+					font-size: 14px;
+					width: 100%;
+					transition: 0.3s;
+					height: 66px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: $white;
+					font-size: 1.102rem;
+					font-weight: 500;
+					position: relative;
+					border-radius: 18.75rem;
+					overflow: hidden;
+
+					@media screen and (max-width:767px) {
+						height: 59px;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						background-color: rgb(14, 6, 36);
+						z-index: -1;
+						transition: 0.3s ease-out;
+						top: 0;
+						left: 0;
+						right: 0;
+						height: 100%;
+						width: 100%;
+					}
+
+					&::after {
+						content: "";
+						display: block;
+						width: 100%;
+						height: 100%;
+						border: 2px solid rgb(14, 6, 36);
+						border-radius: 18.75rem;
+						position: absolute;
+						box-sizing: border-box;
+					}
+
+					&:hover {
+						color: rgb(14, 6, 36);
+					}
+
+					&:hover::before {
+						height: 0%;
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+// For Resource section CSS End 
+
+//For footer CSS
+
+#page-wrapper {
+	.site-footer {
+		background-color: &white;
+		padding-top: 3.75rem;
+
+		.container {
+			max-width: 985px;
+
+			@media screen and (max-width:991px) {
+				max-width: 720px;
+			}
+
+			@media screen and (max-width:767px) {
+				max-width: 540px;
+			}
+
+			.slider {
+				padding: 0 17px 17px;
+
+				.slider-image {
+					background-image: url(../images/Logos+strip.png);
+					width: auto;
+					height: 100px;
+					background-repeat: repeat-x;
+					animation: marquee 20s infinite linear;
+				}
+			}
+
+			h3 {
+				padding: 17px;
+				margin: 0;
+				font-size: 2.844rem;
+				font-weight: 700;
+				line-height: 3.695rem;
+				overflow-wrap: break-word;
+				color: #000;
+				text-align: center;
+
+				@media screen and (max-width: 767px) {
+					font-size: 2rem;
+					font-weight: 700;
+					line-height: 2.5rem;
+				}
+			}
+
+			.footer-logo {
+				text-align: center;
+				padding: 17px;
+
+				img {
+					height: 50px;
+					max-width: 100%;
+				}
+			}
+
+			.footer-icon {
+				padding: 17px;
+
+				nav {
+					display: flex;
+					justify-content: center;
+					height: 33px;
+
+					svg {
+						height: 24px;
+						margin: 0 7px;
+					}
+				}
+			}
+
+			.footer-text-wrap {
+				padding: 17px;
+				text-align: center;
+				font-size: 16px;
+				font-weight: 300;
+				font-style: italic;
+				line-height: 28.8px;
+				letter-spacing: 0.352784px;
+				color: #000;
+
+				.footer-text {
+					margin-bottom: 16px;
+				}
+
+				.footer-Rights {
+					p {
+						margin-bottom: 11px;
+
+					}
+				}
+			}
+
+		}
+
+	}
+}
+
+
+@keyframes marquee {
+	0% {
+		background-position: 0;
+	}
+
+	100% {
+		background-position: -1190px;
+	}
+}
+
+//For footer CSS End
+
+// For login page CSS
+
+.page-user-login,
+.page-user-register,
+.page-user-password {
+	.container {
+		max-width: 850px;
+	}
+
+	.main-content {
+
+		.block-page-title-block {
+			h1 {
+				text-align: center;
+				margin-bottom: 25px;
+				font-size: 2.813rem;
+				font-weight: 500;
+				line-height: 3.688rem;
+			}
+		}
+		nav{
+		&.tabs {
+			display: none;
+			.nav-item {
+				&.active {
+					a {
+						&.active {
+							background-color: rgb(14, 6, 36);
+							color: #fff;
+						}
+					}
+
+				}
+			}
+		}
+	}
+
+		.block-system-main-block {
+			label {
+				font-weight: 300;
+				line-height: 30px;
+				padding-bottom: 4px;
+			}
+
+			.form-check-input {
+				box-shadow: none;
+
+				&:checked {
+					background-color: rgb(14, 6, 36);
+					border-color: rgb(14, 6, 36);
+					box-shadow: none;
+				}
+			}
+
+			input.form-control {
+				background-color: #FAFAFA;
+				border-color: #A9A9A9;
+				padding: 14px 12px;
+				outline-style: solid;
+				outline-color: rgb(14, 6, 36);
+				outline-width: 0;
+				outline-offset: 2px !important;
+				border-radius: 0;
+
+				&:focus {
+					box-shadow: none;
+					outline-width: 2px;
+				}
+			}
+
+			.form-actions {
+
+
+				button {
+					margin-top: 25px !important;
+					margin: 0 auto;
+					display: inline-block;
+					font-size: 14px;
+					transition: 0.3s;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: $white;
+					font-size: 1.102rem;
+					font-weight: 500;
+					position: relative;
+					border-radius: 18.75rem;
+					overflow: hidden;
+					background: transparent;
+					padding: 20px 34px;
+					border: none;
+
+					@media screen and (max-width:767px) {
+						padding: 14px 30px;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						background-color: rgb(14, 6, 36);
+						z-index: -1;
+						transition: 0.3s ease-out;
+						top: 0;
+						left: 0;
+						right: 0;
+						height: 100%;
+						width: 100%;
+					}
+
+					&::after {
+						content: "";
+						display: block;
+						width: 100%;
+						height: 100%;
+						border: 2px solid rgb(14, 6, 36);
+						border-radius: 18.75rem;
+						position: absolute;
+						box-sizing: border-box;
+					}
+
+					&:hover {
+						color: rgb(14, 6, 36);
+					}
+
+					&:hover::before {
+						height: 0%;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.page-user-login,
+.page-user-register,
+.page-user-password {
+	#page-wrapper {
+		#header {
+			margin-bottom: 0;
+		}
+
+		#main-wrapper {
+			padding-top: 1.563rem;
+
+			#main {
+				padding: 0 1.25rem;
+			}
+		}
+
+		.site-footer {
+			padding-top: 1.563rem;
+		}
+	}
+
+}
+
+// For login page CSS End
+.views-field.views-field-field-header-image{
+	img{
+		width:100%;
+	}
+}
+
+
+
+// Image with two column section
+
+#block-bootstrap-subtheme-page-title{
+	display: none;
+}
+.container{
+	max-width: 1800px;
+	padding: 0 4px;
+	.row{
+		margin: 0 auto;
+	}
+}
+
+.img-cont-wrap{
+	padding:40px 0;
+		 .row{
+			.column-wrap{
+				max-width: 575px;
+			}
+			.img-wrap{
+				overflow: hidden;
+				max-height: 500px;
+				.field--type-image{
+					margin: 0;
+				}
+				img{
+					width: 100%;
+					height:100%;
+				}
+			}
+			.title-wrap{
+                 h3{
+					// font-size: $h3-font-size;
+					// line-height: $h3-line-height;
+					// font-weight: $font-weight-medium;
+					// color: $text-color;
+					margin-bottom: 34px;
+					@media screen and (max-width: 1024px) {
+						margin-bottom: 19px;
+					}
+				 }
+			}
+			.text-wrap{
+				p{
+					
+					// font-size: $p-font-size;
+					// line-height: $p-line-height;
+					// font-weight: $font-weight-light;
+					// color: $text-color;
+				}
+			}
+		 }
+
+		 @media screen and  (max-width: 767px) {
+			padding: 17px 0;
+		 }
+}
+
+.two-column-sec-wrap{	
+	padding:58px 0;
+	.column-wrap{
+		max-width: 522px;
+		margin: 0 auto;
+		h3{
+			// font-size: $h3-font-size;
+			// line-height: $h3-line-height;
+			// font-weight: $font-weight-medium;
+			// color: $text-color;
+			text-align: center;
+			margin-bottom: 16px;
+		
+		 }
+		 p{
+			
+			// font-size: $p-font-size;
+			// line-height: $p-line-height;
+			// font-weight: $font-weight-light;
+			// color: $text-color;
+			text-align: center;
+			a{
+				color: $text-color;
+				text-decoration: underline;
+			}
+		}
+	}	        
+}
+
+.img-cont-wrap{
+	.right{
+		 &.row{
+			flex-direction: row-reverse;
+		 }
+	}
+}
+
+.full-bg-section{
+	background-color: $bg-full-section-color;
+}
+
+// Button hover effect css
+
+.link-hover-effect a {
+	margin-top: 34px !important ;
+	display: inline-block;
+	font-size: 14px;
+	transition: 0.3s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $white;
+	font-size: 1.102rem;
+	font-weight: 500;
+	position: relative;
+	border-radius: 18.75rem;
+	overflow: hidden;
+	background: transparent;
+	padding: 1.188rem 2.125rem;
+	border: none;
+	max-width: 165px;
+	letter-spacing: 0.88196px;
+
+	@media screen and (max-width:767px) {
+		margin-top: 22px !important;
+	}
+	@media screen and (max-width:767px) {
+		padding: 14px 30px;
+	}
+	
+
+	&::before {
+		content: "";
+		position: absolute;
+		background-color: rgb(14, 6, 36);
+		z-index: -1;
+		transition: 0.3s ease-out;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 2px solid rgb(14, 6, 36);
+		border-radius: 18.75rem;
+		position: absolute;
+		box-sizing: border-box;
+	}
+
+	&:hover {
+		color: rgb(14, 6, 36);
+	}
+
+	&:hover::before {
+		height: 0%;
+	}
+}
+
+
+// Button hover effect css
+
+
+// all h3 heading with paragraph CSS
+h3{
+	font-size: $h3-font-size;
+	line-height: $h3-line-height;
+	font-weight: $font-weight-medium;
+	color: $text-color;
+	@media screen and (max-width:1024px){
+		font-size: 2rem;
+	   line-height: 2.625rem;
+	}
+	@media screen and (max-width:767px){
+		font-size: 1.375rem;
+	   line-height: 1.813rem;
+	}
+ }
+ p{
+	font-size: $p-font-size;
+	line-height: $p-line-height;
+	font-weight: $font-weight-light;
+	color: $text-color;
+	a{
+		color: $text-color;
+		text-decoration: underline;
+	}
+	@media screen and (max-width:1024px){
+		font-size: 1rem;
+	   line-height:1.75rem;
+	}
+}
+
+// all h3 heading with paragraph CSS

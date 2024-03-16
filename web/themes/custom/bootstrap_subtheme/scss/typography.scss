@@ -1,0 +1,162 @@
+/* TYPOGRAPHY */
+
+/* Google Fonts */
+
+//@import url("https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic");
+//@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900");
+// font families
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('../font/NeueHaasDisplay-Mediu.eot');
+    src: url('../font/NeueHaasDisplay-Mediu.eot?#iefix') format('embedded-opentype'),
+        url('../font/NeueHaasDisplay-Mediu.woff2') format('woff2'),
+        url('../font/NeueHaasDisplay-Mediu.woff') format('woff'),
+        url('../font/NeueHaasDisplay-Mediu.ttf') format('truetype'),
+        url('../font/NeueHaasDisplay-Mediu.svg#NeueHaasDisplay-Mediu') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('../font/NeueHaasDisplay-Bold.eot');
+    src: url('../font/NeueHaasDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/NeueHaasDisplay-Bold.woff2') format('woff2'),
+        url('../font/NeueHaasDisplay-Bold.woff') format('woff'),
+        url('../font/NeueHaasDisplay-Bold.ttf') format('truetype'),
+        url('../font/NeueHaasDisplay-Bold.svg#NeueHaasDisplay-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('../font/NeueHaasDisplay-Light.eot');
+    src: url('../font/NeueHaasDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('../font/NeueHaasDisplay-Light.woff2') format('woff2'),
+        url('../font/NeueHaasDisplay-Light.woff') format('woff'),
+        url('../font/NeueHaasDisplay-Light.ttf') format('truetype'),
+        url('../font/NeueHaasDisplay-Light.svg#NeueHaasDisplay-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('../font/NeueHaasDisplay-XThin.eot');
+    src: url('../font/NeueHaasDisplay-XThin.eot?#iefix') format('embedded-opentype'),
+        url('../font/NeueHaasDisplay-XThin.woff2') format('woff2'),
+        url('../font/NeueHaasDisplay-XThin.woff') format('woff'),
+        url('../font/NeueHaasDisplay-XThin.ttf') format('truetype'),
+        url('../font/NeueHaasDisplay-XThin.svg#NeueHaasDisplay-XThin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('../font/NeueHaasDisplay-Black.eot');
+    src: url('../font/NeueHaasDisplay-Black.eot?#iefix') format('embedded-opentype'),
+        url('../font/NeueHaasDisplay-Black.woff2') format('woff2'),
+        url('../font/NeueHaasDisplay-Black.woff') format('woff'),
+        url('../font/NeueHaasDisplay-Black.ttf') format('truetype'),
+        url('../font/NeueHaasDisplay-Black.svg#NeueHaasDisplay-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('../font/NeueHaasDisplay-Roman.eot');
+    src: url('../font/NeueHaasDisplay-Roman.eot?#iefix') format('embedded-opentype'),
+        url('../font/NeueHaasDisplay-Roman.woff2') format('woff2'),
+        url('../font/NeueHaasDisplay-Roman.woff') format('woff'),
+        url('../font/NeueHaasDisplay-Roman.ttf') format('truetype'),
+        url('../font/NeueHaasDisplay-Roman.svg#NeueHaasDisplay-Roman') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('../font/NeueHaasDisplay-XXThin.eot');
+    src: url('../font/NeueHaasDisplay-XXThin.eot?#iefix') format('embedded-opentype'),
+        url('../font/NeueHaasDisplay-XXThin.woff2') format('woff2'),
+        url('../font/NeueHaasDisplay-XXThin.woff') format('woff'),
+        url('../font/NeueHaasDisplay-XXThin.ttf') format('truetype'),
+        url('../font/NeueHaasDisplay-XXThin.svg#NeueHaasDisplay-XXThin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    src: url('../font/NeueHaasDisplay-Thin.eot');
+    src: url('../font/NeueHaasDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../font/NeueHaasDisplay-Thin.woff2') format('woff2'),
+        url('../font/NeueHaasDisplay-Thin.woff') format('woff'),
+        url('../font/NeueHaasDisplay-Thin.ttf') format('truetype'),
+        url('../font/NeueHaasDisplay-Thin.svg#NeueHaasDisplay-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+$font-lato: 'Lato',
+Arial,
+Verdana,
+sans-serif;
+
+$font-neue-haas:'Neue Haas Grotesk Display Pro';
+
+$font-raleway: 'Raleway',
+Arial,
+Verdana,
+sans-serif;
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif:      $font-neue-haas , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-size-root:              null;
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-xs:                $font-size-base * .75;
+$font-size-sm:                $font-size-base * .875;
+$font-size-lg:                $font-size-base * 1.25;
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-medium:           500;
+$font-weight-bolder:          bolder;
+
+$font-weight-base:            $font-weight-normal;
+
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+$line-height-lg:              2;
+
+$h1-font-size:                5rem;
+$h3-font-size:                2.813rem;
+$h2-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+$p-font-size:                  1.063rem;
+
+$h3-line-height :3.75rem;
+$p-line-height :1.938rem;
+
+
