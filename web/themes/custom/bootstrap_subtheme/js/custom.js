@@ -33,7 +33,42 @@
       });
 
       //  For Resource section End
-      // ==================================================
+
+
+      // Hamburger Menu
+        jQuery(document).ready(function($) {
+          $('.sf-accordion-toggle a').click(function() {
+              $('body').toggleClass('open-sub-menu');
+          });
+        });
+       // Hamburger Menu
+
+       // button Menu
+       if (!$('.submit-btn button span').length) {
+        var buttonTextSubmit = $(".submit-btn button").text();
+        $(".submit-btn button").text(" ");
+        $('.submit-btn button').append('<span>' + buttonTextSubmit + '</span>');
+       }
+       
+       $('#search-block-form input').attr('placeholder', 'Search');
+
+       // Check if SVG is already appended
+       if ($('#search-block-form button svg').length === 0) {
+           var svgContent = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">' +
+               '<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>' +
+               '</svg>';
+   
+           // Append SVG content under the button
+           $('#search-block-form button').append(svgContent);
+       }
+
+      // Check if the header-banner element exists
+       if (!$('.header-banner').length) {
+        // If it exists, add the class to the body element
+        $('body').addClass('banner-not');
+       }
+     // button End 
+      
 
     }
   };

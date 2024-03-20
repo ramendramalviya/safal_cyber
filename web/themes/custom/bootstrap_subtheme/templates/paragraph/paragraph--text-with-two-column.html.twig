@@ -39,11 +39,13 @@
  */
 #}
 
-
+{% set bg_color = content.field_text_with_two_col_bg_color.0|render|striptags|trim|clean_class %}
+{% set layout_position = content.field_text_two_col_left_layout.0|render|striptags|trim|clean_class %}
 
 {% block paragraph %}
-    <div class="two-column-sec-wrap full-bg-section container-fluid">
-        <div class="row gx-5">
+    <div class="two-column-sec-wrap container-fluid bg-{{ bg_color }} layout-{{layout_position}}">
+     <div class="container ">
+        <div class="row gx-5 row-gap-3">
           <div class="col-sm-12 col-md-6 col-lg-6" >
             <div class="column-wrap">
                   {% if content.field_text_two_col_left_title|render is not empty %}
@@ -54,6 +56,11 @@
                   {% if content.field_text_two_col_left_text|render is not empty %}
                     <div class="column-text">
                       {{ content.field_text_two_col_left_text }}
+                    </div>  
+                  {% endif %}
+                  {% if content.field_text_two_col_left_btn|render is not empty %}
+                    <div class="link-wrap link-hover-effect">
+                      {{ content.field_text_two_col_left_btn }}
                     </div>  
                   {% endif %}
           </div>  
@@ -70,8 +77,14 @@
                       {{ content.field_text_two_col_right_text }}
                     </div>  
                   {% endif %}
+                  {% if content.field_text_two_col_right_btn|render is not empty %}
+                    <div class="link-wrap link-hover-effect">
+                      {{ content.field_text_two_col_right_btn }}
+                    </div>  
+                  {% endif %}
                 </div> 
         </div>
         </div> 
+          </div> 
       </div>  
 {% endblock paragraph %}

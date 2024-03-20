@@ -32,25 +32,6 @@ function bootstrap_subtheme_form_system_theme_settings_alter(&$form, FormStateIn
 }
 
 /**
- * Implements hook_form_alter().
- */
-function bootstrap_subtheme_form_alter(&$form, &$form_state, $form_id) {
-  // Check if the form is the user login form.
-  if ($form_id == 'user_login_form') {
-    // Add a custom submit handler to the form.
-    $form['#submit'][] = 'custom_portal_redirect_user_login_submit';
-  }
-}
-
-/**
- * Custom submit handler to redirect users after login.
- */
-function custom_portal_redirect_user_login_submit(&$form, &$form_state) {
-  // Redirect the user to the homepage.
-  $form_state->setRedirect('<front>');
-}
-
-/**
  * Implements template_preprocess_html().
  */
 function bootstrap_subtheme_preprocess_html(&$variables) {
