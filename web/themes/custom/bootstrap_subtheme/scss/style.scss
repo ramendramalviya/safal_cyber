@@ -1088,6 +1088,14 @@ iframe{
 
 // Image with two column section
 
+.btn-full{
+	.link-hover-effect{
+		a{
+			max-width: 100%;
+		}
+	}
+}
+
 #block-bootstrap-subtheme-page-title{
 	display: none;
 }
@@ -1100,6 +1108,12 @@ iframe{
 					max-width: 100%;
 					margin-bottom: 1.25rem;
 				 }
+				//  .right{
+				// 	a{
+				// 		max-width: 100%;
+				// 		width: 100%;
+				// 	}
+				//  }
 			}
 			.img-wrap{
 				overflow: hidden;

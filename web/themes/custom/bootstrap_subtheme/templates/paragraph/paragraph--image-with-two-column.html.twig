@@ -42,6 +42,7 @@
 {% set imgPosition = content.field_img_with_two_col_position.0|render|striptags|trim|clean_class %}
 {% set bg_color = content.field_image_two_column_bg.0|render|striptags|trim|clean_class %}
 {% set btn_position = content.field_img_with_two_col_btn_pos.0|render|striptags|trim|clean_class %}
+{% set custom_class = content.field_img_with_two_col_class.0|render|striptags|trim|clean_class %}
 
 {% set 
   para_classes = [
@@ -53,7 +54,7 @@
 
 {% block paragraph %}
   <div {{ attributes.addClass(para_classes) }}> 
-     <div class="container">
+     <div class="container {{ custom_class }}">
          
              {% if content.field_img_with_two_col_sec_title|render is not empty %}
                  <div class="row gx-5 row-gap-3">
