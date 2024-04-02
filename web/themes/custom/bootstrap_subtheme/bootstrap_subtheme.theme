@@ -42,4 +42,19 @@ function bootstrap_subtheme_preprocess_html(&$variables) {
   if ($is_admin) {
     $variables['attributes']['class'][] = 'admin-user-role';
   }
+
+  // Get the current node.
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  // Check if the current page is a node and if it has a content type.
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    // Check if the field is empty.
+    if ($node->hasField('field_header_image') && !$node->get('field_header_image')->isEmpty()) {
+      // Add class if field is not empty.
+      $variables['attributes']['class'][] = 'header-banner-true';
+    } else {
+      // Add class if field is empty.
+      $variables['attributes']['class'][] = 'empty-header-banner';
+    }
+  }
 }

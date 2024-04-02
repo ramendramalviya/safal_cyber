@@ -1,0 +1,72 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set bg_color = content.field_three_column_card_bg.0|render|striptags|trim|clean_class %}
+
+{% block paragraph %}
+	<div class="section-divider-top">
+	   <div class="section-divider">
+	   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1690.29 177.1"><defs><style>.cls-1{fill:#eaedf6;}.cls-2{fill:#231f20;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M1690.29,1.52,0,0,.09,172.16l282.6-34.56,243.84-28.32S780.71,82,852.93,68.48l291.6,37.44L1416,140.48l274.2,32.64S1690.29,59.84,1690.29,1.52Z"/><polygon class="cls-2" points="855.09 69.19 2.17 171.75 2.17 176.91 854.8 74.39 1690.25 177.1 1690.25 171.87 855.09 69.19"/></g></g></svg>
+	    </div>
+	</div>
+	<div class="three-column-card container-fluid bg-{{ bg_color }}">
+		<div class="container">
+			<div class="row gx-5 row-gap-3">
+				{% if content.	field_three_col_card_title|render is not empty %}
+					<div class="column-title">
+						<h3>{{ content.field_three_col_card_title }}</h3>
+					</div>
+				{% endif %}
+			</div>
+			<div class="row gx-5 row-gap-3">
+				{% if content.	field_three_col_card_col_card|render is not empty %}
+					{{ content.	field_three_col_card_col_card }}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="section-divider-bottom">
+	   <div class="section-divider">
+	   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1690.29 177.1"><defs><style>.cls-1{fill:#eaedf6;}.cls-2{fill:#231f20;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M1690.29,1.52,0,0,.09,172.16l282.6-34.56,243.84-28.32S780.71,82,852.93,68.48l291.6,37.44L1416,140.48l274.2,32.64S1690.29,59.84,1690.29,1.52Z"/><polygon class="cls-2" points="855.09 69.19 2.17 171.75 2.17 176.91 854.8 74.39 1690.25 177.1 1690.25 171.87 855.09 69.19"/></g></g></svg>
+	    </div>
+	</div>
+
+{% endblock paragraph %}

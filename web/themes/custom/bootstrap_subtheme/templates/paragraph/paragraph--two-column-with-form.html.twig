@@ -58,6 +58,11 @@
     <div class="row gx-5 row-gap-3">
       <div class="{{ col_layout_7 }} {{ col_layout_6 }}" >
         <div class="column-wrap">
+            {% if content.field_two_column_with_form_img|render is not empty %}
+            <div class="title-wrap">
+              {{ content.field_two_column_with_form_img }}
+            </div>
+          {% endif %}
           {% if content.field_two_col_with_form_title|render is not empty %}
             <div class="title-wrap">
               <h2>{{ content.field_two_col_with_form_title }}</h2>

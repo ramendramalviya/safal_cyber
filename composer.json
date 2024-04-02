@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/block_classes": "^1.0",
+        "drupal/block_field": "^1.0@RC",
         "drupal/bootstrap_barrio": "^5.5",
         "drupal/bootstrap_sass": "^5.0",
         "drupal/conditional_fields": "^4.0@alpha",
@@ -26,6 +27,7 @@
         "drupal/paragraphs": "^1.17",
         "drupal/pathauto": "^1.12",
         "drupal/superfish": "^1.7",
+        "drupal/views_accordion": "^2.0",
         "drupal/webform": "^6.2",
         "drush/drush": "^12.4"
     },

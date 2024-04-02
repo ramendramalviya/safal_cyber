@@ -54,6 +54,15 @@
 {% block paragraph %}
   <div {{ attributes.addClass(para_classes) }}> 
      <div class="container">
+         
+             {% if content.field_img_with_two_col_sec_title|render is not empty %}
+                 <div class="row gx-5 row-gap-3">
+                    <div class="column-title">
+                      <h3 >{{ content.field_img_with_two_col_sec_title }}</h3>
+                    </div>
+                   </div>   
+            {% endif %}
+        
         <div class="row gx-5 {{ imgPosition }} row-gap-3">
           <div class="col-sm-12 col-md-6 col-lg-6" >
             <div class="column-wrap">
